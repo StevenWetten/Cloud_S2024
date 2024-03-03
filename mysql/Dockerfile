@@ -1,2 +1,4 @@
 FROM mysql/mysql-server:latest
-COPY cattle.csv .
+ENV MYSQL_DATABASE csc468
+COPY cattle.csv /
+COPY ./table.sql /docker-entrypoint-initdb.d/
