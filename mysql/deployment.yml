@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysqlDeployment
+  labels:
+    role: app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: app
+  template:
+    metadata:
+      labels:
+        role: app
+    spec:
+      containers:
+      - name: app
+        image: stevenwetten/mysql:mysql_image
+        resources:
+          requests:
+            cpu: 10m
