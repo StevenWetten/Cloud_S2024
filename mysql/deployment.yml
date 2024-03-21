@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: stevenwetten/mysql:mysql_image
+        image: stevenwetten/mysql:image_four
         resources:
           requests:
             cpu: 10m
