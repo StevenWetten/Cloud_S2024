@@ -5,7 +5,7 @@ metadata:
   labels:
     role: app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       role: app
@@ -20,3 +20,5 @@ spec:
         resources:
           requests:
             cpu: 10m
+        ports:
+        - containerPort: 3306
